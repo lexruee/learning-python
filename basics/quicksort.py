@@ -12,7 +12,7 @@ def quicksort(xs):
                 + quicksort(list(filter(lambda x: x > pivot, xs)))
 
 
-xs = [random.randint(0, 100) for _ in range(20)]
+xs = random.sample(range(0, 100), 20)
 print("input:  ", xs)
 
 ys = quicksort(xs)
