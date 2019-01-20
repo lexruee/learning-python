@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-import itertools, functools
+import itertools
 
 
 tuples = itertools.permutations(range(3),2)
