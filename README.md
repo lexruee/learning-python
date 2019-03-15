@@ -13,6 +13,7 @@ Great online resources for Python developers are among other things:
  * [The Python 3 Tutorial](https://docs.python.org/3/tutorial/index.html)
  * [Documentation for Python 3](https://docs.python.org/3/)
  * [The Hitchhiker’s Guide to Python!](https://docs.python-guide.org/)
+ * [RealPython](https://realpython.com/)
  * [PyMOTW-3](https://pymotw.com/3/index.html)
  * [pythonspot.com - Python Tutorials](https://pythonspot.com/)
  * [LearnPython.org](https://www.learnpython.org/)
