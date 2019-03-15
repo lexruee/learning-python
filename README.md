@@ -49,28 +49,63 @@ on a development system.
 python3 -m http.server 8080
 ```
 
-### Virtualenv: basic workflow
+### Creating virtual Python environments
 
-1) Create a new Python project and create new virtual environment called .venv
-
-```
-mkdir project
-virtualenv .venv -p python3.6
-source .venv/bin/activate
-```
-
-2) Install dependencies and projects:
+A virtual Python environment can be created using the `venv` command.
 
 ```
-pip install -r requirements
+python3 -m venv --help
+
+usage: venv [-h] [--system-site-packages] [--symlinks | --copies] [--clear]
+            [--upgrade] [--without-pip] [--prompt PROMPT]
+            ENV_DIR [ENV_DIR ...]
+
+Creates virtual Python environments in one or more target directories.
+
+positional arguments:
+  ENV_DIR               A directory to create the environment in.
+
+optional arguments:
+  -h, --help            show this help message and exit
+  --system-site-packages
+                        Give the virtual environment access to the system
+                        site-packages dir.
+  --symlinks            Try to use symlinks rather than copies, when symlinks
+                        are not the default for the platform.
+  --copies              Try to use copies rather than symlinks, even when
+                        symlinks are the default for the platform.
+  --clear               Delete the contents of the environment directory if it
+                        already exists, before environment creation.
+  --upgrade             Upgrade the environment directory to use this version
+                        of Python, assuming Python has been upgraded in-place.
+  --without-pip         Skips installing or upgrading pip in the virtual
+                        environment (pip is bootstrapped by default)
+  --prompt PROMPT       Provides an alternative prompt prefix for this
+                        environment.
+
+Once an environment has been created, you may wish to activate it, e.g. by
+sourcing an activate script in its bin directory.
 ```
+For example, to a create virtual environment in a directory called `test`, 
+you can run the following command:
 
 ```
-pip install -e .
+python3 -m venv ./test
 ```
 
+#### Basic Workflow
+
+1) Create a new Python project and and its virtual environment:
+
 ```
-python setup.py install -e
+python3 -m venv project
+source project/bin/activate
+```
+
+2) Install dependencies and projects using `pip`:
+
+```
+pip install <package>
 ```
 
 3) Leave the virtual environment:
@@ -81,6 +116,14 @@ decativate
 
 
 ### pip
+
+```
+pip is the package installer for Python. 
+You can use pip to install packages from the Python Package Index and other indexes.
+```
+
+Project Website: [pip.pypa.io](https://pip.pypa.io/en/stable/)
+
 
 The table below provides the basic pip commands:
 
@@ -96,6 +139,14 @@ The table below provides the basic pip commands:
 
 
 ### pipenv
+
+```
+Pipenv is a tool that aims to bring the best of all packaging worlds 
+(bundler, composer, npm, cargo, yarn, etc.) to the Python world. 
+Windows is a first-class citizen, in our world.
+```
+
+Project Website: [github.com/pypa/pipenv](https://github.com/pypa/pipenv)
 
 ```
 pipenv --help
