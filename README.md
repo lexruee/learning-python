@@ -32,8 +32,9 @@ Very useful Python libraries:
 
 ## Tools
 
- * [pipenv: python packaging tool](https://docs.pipenv.org/)
+ * [pyenv: tool to manage multiple python installations](https://github.com/pyenv/pyenv)
  * [pip: package manager for installing Python packages](https://pip.pypa.io/en/stable/)
+ * [pipenv: tool to manage project dependencies within a virtual environment](https://docs.pipenv.org/)
  * [virtualenv: tool to create isolated Python environments.](https://virtualenv.pypa.io/en/stable/)
  * [pytest: testing tool](https://docs.pytest.org/en/latest/)
  * [ipython: interactive python shell](https://ipython.org/)
@@ -114,6 +115,36 @@ pip install <package>
 decativate
 ```
 
+### pyenv
+
+```
+pyenv lets you easily switch between multiple versions of Python. 
+It's simple, unobtrusive, and follows the UNIX tradition of single-purpose tools that do one thing well.
+```
+
+Project Website: [github.com/pyenv/pyenv](https://github.com/pyenv/pyenv)
+
+```
+pyenv help
+
+Usage: pyenv <command> [<args>]
+
+Some useful pyenv commands are:
+   commands    List all available pyenv commands
+   local       Set or show the local application-specific Python version
+   global      Set or show the global Python version
+   shell       Set or show the shell-specific Python version
+   install     Install a Python version using python-build
+   uninstall   Uninstall a specific Python version
+   rehash      Rehash pyenv shims (run this after installing executables)
+   version     Show the current Python version and its origin
+   versions    List all Python versions available to pyenv
+   which       Display the full path to an executable
+   whence      List all Python versions that contain the given executable
+
+See `pyenv help <command>' for information on a specific command.
+For full documentation, see: https://github.com/pyenv/pyenv#readme
+```
 
 ### pip
 
@@ -245,4 +276,5 @@ Show virtualenv:
 ```
 pipenv --venv
 ```
+
 
